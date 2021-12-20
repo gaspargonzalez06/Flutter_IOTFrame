@@ -44,8 +44,6 @@ class _InicioState extends State<Inicio> {
   List listItemfecha =[
     "2021-09-02","2021-09-05","2021-09-08","2021-09-15"
   ];
-
-  
   
   @override
   void initState() {
@@ -79,7 +77,7 @@ class _InicioState extends State<Inicio> {
               yValueMapper: (GDPData gdp, _)=>gdp.gdp)
           ],
           primaryXAxis: CategoryAxis(),
-          )
+          ),
           ),
           Container(
             child: DropdownButton(
