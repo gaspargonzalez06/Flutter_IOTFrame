@@ -30,12 +30,13 @@ class Inicio extends StatefulWidget {
 }
 
 class _InicioState extends State<Inicio> {
+  late List<GDPData> _chartData;
 
 //el future ayuda a que el evento reciba una respuesta de un api
   
 
 // variables que se usan al crear las combobox y la grafica
-  late List<GDPData> _chartData;
+  
   String valueChoose="Dev1";
   String valueChoosefecha="2021-09-02";
   List listItem =[
@@ -44,7 +45,7 @@ class _InicioState extends State<Inicio> {
   List listItemfecha =[
     "2021-09-02","2021-09-05","2021-09-08","2021-09-15"
   ];
-  
+
   @override
   void initState() {
 
@@ -87,7 +88,6 @@ class _InicioState extends State<Inicio> {
                   valueChoose:newValue;
                 });
 
-             
             },
             items: listItem.map((valueItem){
               return DropdownMenuItem(
@@ -104,8 +104,6 @@ class _InicioState extends State<Inicio> {
                 setState(() {
                   valueChoosefecha:newValue;
                 });
-
-             
             },
             items: listItemfecha.map((valueItem){
               return DropdownMenuItem(
@@ -115,9 +113,16 @@ class _InicioState extends State<Inicio> {
             }).toList(),
             ),
           ),
-          
-
-          
+          Container(
+            child:MaterialButton(
+              minWidth: 200.0,
+              height: 40.0,
+              // aqui debe ir el metodo post en el on pressed
+              onPressed: () {},
+              color: Colors.lightBlue,
+              child: Text('Submit', style: TextStyle(color: Colors.white)),
+            ),
+          ),
           ],
           )
 
