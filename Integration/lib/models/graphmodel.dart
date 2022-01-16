@@ -10,7 +10,7 @@ String graphModelToJson(GraphModel data) => json.encode(data.toJson());
 
 class GraphModel {
     GraphModel({
-        required this.items,
+        required this.items  ,
         required this.count,
         required this.scannedCount,
         required this.responseMetadata,
