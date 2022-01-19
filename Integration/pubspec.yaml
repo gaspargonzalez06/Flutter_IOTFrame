@@ -37,6 +37,7 @@ dependencies:
   charts_flutter: ^0.11.0
 
 dev_dependencies:
+  syncfusion_flutter_charts: ^19.1.54
   http: ^0.12.2
   flutter_test:
     sdk: flutter
